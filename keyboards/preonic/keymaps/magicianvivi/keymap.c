@@ -31,20 +31,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * | Esc  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Ç    |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | W    |   B  |   É  |   P  |   O  |  Del | Bksp |   V  |   D  |   L  |   J  | Z    |
+ * | Z    |   B  |   É  |   P  |   O  |  Del | Bksp |   V  |   D  |   L  |   J  | W    |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | CTRL |   A  |   U  |   I  |   E  | Ù    | C    |   T  |   S  |   R  |   N  | M    |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Ê    |   À  |   Y  |   X  |   K  | Shift| Shift|   Q  |   G  |   H  |   F  | È    |
+ * | Shift|   Ê  |   À  |   Y  |   X  | K    | È    |   Q  |   G  |   H  |   F  | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Caps | AltGr| Super| Alt  |LowTab|    Space    |RaiEnt| Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_BEPO] = {
   {KC_ESC,  BP_1,    BP_2,    BP_3,    BP_4,    BP_5,    BP_6,    BP_7,    BP_8,    BP_9,    BP_0,  BP_CCED},
-  {BP_W,  BP_B,    BP_ECUT,    BP_P,    BP_O,    KC_DEL,    KC_BSPC,    BP_V,    BP_D,    BP_L,    BP_J,    BP_Z},
+  {BP_Z,  BP_B,    BP_ECUT,    BP_P,    BP_O,    KC_DEL,    KC_BSPC,    BP_V,    BP_D,    BP_L,    BP_J,    BP_W},
   {KC_LCTL,  BP_A,    BP_U,    BP_I,    BP_E,    BP_UGRV,    BP_C,    BP_T,    BP_S,    BP_R,    BP_N, BP_M},
-  {BP_ECRC, BP_AGRV,    BP_Y,    BP_X,    BP_K,    KC_LSFT,    KC_RSFT,    BP_Q,    BP_G, BP_H,  BP_F, BP_EGRV },
+  {KC_LSFT, BP_ECRC, BP_AGRV,    BP_Y,    BP_X,    BP_K,    BP_EGRV,    BP_Q,    BP_G, BP_H,  BP_F, KC_RSFT },
   {KC_CAPS, BP_ALGR, KC_LGUI, KC_LALT, LT(_LOWER, KC_TAB),   KC_SPC,  KC_SPC,  LT(_RAISE, KC_ENTER),   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
 },
 
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {XXXXXXX, KC_F1, KC_F2,   KC_F3, KC_F4, XXXXXXX, XXXXXXX, BP_7, BP_8, BP_9, BP_PLUS, XXXXXXX},
   {XXXXXXX,  KC_F5,   KC_F6,   KC_F7,   KC_F8, XXXXXXX,  XXXXXXX, BP_4, BP_5, BP_6, BP_EQL, XXXXXXX},
   {XXXXXXX, KC_F9,   KC_F10,   KC_F11,   KC_F12, XXXXXXX, XXXXXXX, BP_1, BP_2, BP_3, KC_ENTER, XXXXXXX},
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, BP_0, BP_0, RAISE, KC_HOME, KC_PGDN, KC_UP, KC_END}
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, BP_0, BP_0, RAISE, KC_HOME, KC_PGDN, KC_PGUP, KC_END}
 },
 
 /* Raise
