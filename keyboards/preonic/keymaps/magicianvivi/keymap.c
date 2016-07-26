@@ -50,44 +50,44 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |      |      |      |      |      |      |      |   /  |   *  |   -  |   %  |      |
+ * | Esc  |      |      |      |      |      |      |   /  |   *  |   -  |   %  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |   F1 |   F2 |   F3 |   F4 |      |      |   7  |   8  |   9  |   +  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |  F5  |  F6  |  F7  |  F8  |      |      |   4  |   5  |   6  |   =  |      |
+ * | Ctrl |  F5  |  F6  |  F7  |  F8  |      |      |   4  |   5  |   6  |   =  |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |  F9  |  F10 |  F11 |  F12 |      |      |   1  |   2  |   3  |Enter |      |
+ * |Shift |  F9  |  F10 |  F11 |  F12 |      |      |   1  |   2  |   3  |Enter | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      0      |ADJUST| Home | Down | Up   | End  |
+ * | Caps | AltGr| Super| Alt  |      |      0      |ADJUST| Home | Down | Up   | End  |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = {
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BP_SLSH, BP_ASTR, BP_MINS, BP_PERC, XXXXXXX},
+  {KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BP_SLSH, BP_ASTR, BP_MINS, BP_PERC, XXXXXXX},
   {XXXXXXX, KC_F1, KC_F2,   KC_F3, KC_F4, XXXXXXX, XXXXXXX, BP_7, BP_8, BP_9, BP_PLUS, XXXXXXX},
-  {XXXXXXX,  KC_F5,   KC_F6,   KC_F7,   KC_F8, XXXXXXX,  XXXXXXX, BP_4, BP_5, BP_6, BP_EQL, XXXXXXX},
-  {XXXXXXX, KC_F9,   KC_F10,   KC_F11,   KC_F12, XXXXXXX, XXXXXXX, BP_1, BP_2, BP_3, KC_ENTER, XXXXXXX},
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, BP_0, BP_0, RAISE, KC_HOME, KC_PGDN, KC_PGUP, KC_END}
+  {KC_LCTL,  KC_F5,   KC_F6,   KC_F7,   KC_F8, XXXXXXX,  XXXXXXX, BP_4, BP_5, BP_6, BP_EQL, XXXXXXX},
+  {KC_LSFT, KC_F9,   KC_F10,   KC_F11,   KC_F12, XXXXXXX, XXXXXXX, BP_1, BP_2, BP_3, KC_ENTER, KC_RSFT},
+  {KC_CAPS, BP_ALGR, KC_LGUI, KC_LALT, _______, BP_0, BP_0, RAISE, KC_HOME, KC_PGDN, KC_PGUP, KC_END}
 },
 
 /* Raise
  * ,-----------------------------------------------------------------------------------.
- * |      |      |   <  |   >  |      |      |      |      |   «  |   »  |      |      |
+ * | Esc  |      |   <  |   >  |      |      |      |      |   «  |   »  |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |   "  |   [  |   ]  |   &  |   !  |   ^  |   +  |   -  |   /  |   *  |      |
+ * |      |   "  |   [  |   ]  |   &  |   !  |   ^  |   +  |   -  |   /  |   *  |  \   |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | \    |  $   |  (   |  )   |  .   |  :   |  @   |   =  |   °  |   %  |   `  |  |   |
+ * | CTRL |  $   |  (   |  )   |  ,   |  :   |  @   |   =  |   °  |   %  |   `  |  |   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |  #   |  {   |  }   |  ,   |  ;   |   ¨  |   '  |   ?  |   ~  |  …   |      |
+ * | Shift|  #   |  {   |  }   |  .   |  ;   |   ¨  |   '  |   ?  |   ~  |  …   | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | AltGr| Ctrl | Super| Alt  |ADJUST|      _      |      | Left | Down | Up   |Right |
+ * | Caps | AltGr| Super| Alt  |ADJUST|      _      |      | Left | Down | Up   |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = {
-  {XXXXXXX, XXXXXXX,   BP_LESS,    BP_GRTR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_LGIL,    BP_RGIL, XXXXXXX, XXXXXXX},
-  {XXXXXXX,  BP_DQOT,    BP_LBRC,    BP_RBRC,    BP_AMPR,    S(BP_DCRC),    BP_DCRC,    BP_PLUS,    BP_MINS,    BP_SLSH,    BP_ASTR, XXXXXXX},
-  {BP_BSLS,  BP_DLR,   BP_LPRN,   BP_RPRN,   BP_DOT,   BP_COLON,   BP_AT,   BP_EQL, BP_DEGR,  BP_PERC, BP_GRV, BP_PIPE},
-  {XXXXXXX, BP_HASH,   BP_LCBR,   BP_RCBR,   BP_COMM,  BP_SCLN,  BP_DTRM,  BP_APOS, BP_QEST, BP_TILD, BP_ELPS, XXXXXXX},
-  {BP_ALGR, KC_LCTL, KC_LGUI, KC_LALT, LOWER, BP_UNDS, BP_UNDS, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT}
+  {KC_ESC, XXXXXXX,   BP_LESS,    BP_GRTR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_LGIL,    BP_RGIL, XXXXXXX, XXXXXXX},
+  {XXXXXXX,  BP_DQOT,    BP_LBRC,    BP_RBRC,    BP_AMPR,    S(BP_DCRC),    BP_DCRC,    BP_PLUS,    BP_MINS,    BP_SLSH,    BP_ASTR, BP_BSLS},
+  {KC_LCTL,  BP_DLR,   BP_LPRN,   BP_RPRN,   BP_COMM,   BP_COLON,   BP_AT,   BP_EQL, BP_DEGR,  BP_PERC, BP_GRV, BP_PIPE},
+  {KC_LSFT, BP_HASH,   BP_LCBR,   BP_RCBR,   BP_DOT,  BP_SCLN,  BP_DTRM,  BP_APOS, BP_QEST, BP_TILD, BP_ELPS, KC_RSFT},
+  {KC_CAPS, BP_ALGR, KC_LGUI, KC_LALT, LOWER, BP_UNDS, BP_UNDS, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT}
 },
 
 /* Adjust (Lower + Raise)
