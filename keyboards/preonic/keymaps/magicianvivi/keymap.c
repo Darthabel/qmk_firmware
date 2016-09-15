@@ -33,9 +33,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Z    |   B  |   É  |   P  |   O  |  Del | Bksp |   V  |   D  |   L  |   J  | W    |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | CTRL |   A  |   U  |   I  |   E  | Ù    | C    |   T  |   S  |   R  |   N  | M    |
+ * | CTRL |   A  |   U  |   I  |   E  | ,    | C    |   T  |   S  |   R  |   N  | M    |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|   Ê  |   À  |   Y  |   X  | K    | È    |   Q  |   G  |   H  |   F  | Shift|
+ * | Shift|   À  |   Y  |   X  |   .  |  K   | È    |   Q  |   G  |   H  |   F  | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Caps | AltGr| Super| Alt  |LowTab|    Space    |RaiEnt| Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
@@ -43,8 +43,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BEPO] = {
   {KC_ESC,  BP_1,    BP_2,    BP_3,    BP_4,    BP_5,    BP_6,    BP_7,    BP_8,    BP_9,    BP_0,  BP_CCED},
   {BP_Z,  BP_B,    BP_ECUT,    BP_P,    BP_O,    KC_DEL,    KC_BSPC,    BP_V,    BP_D,    BP_L,    BP_J,    BP_W},
-  {KC_LCTL,  BP_A,    BP_U,    BP_I,    BP_E,    BP_UGRV,    BP_C,    BP_T,    BP_S,    BP_R,    BP_N, BP_M},
-  {KC_LSFT, BP_ECRC, BP_AGRV,    BP_Y,    BP_X,    BP_K,    BP_EGRV,    BP_Q,    BP_G, BP_H,  BP_F, KC_RSFT },
+  {KC_LCTL,  BP_A,    BP_U,    BP_I,    BP_E,    BP_COMM,    BP_C,    BP_T,    BP_S,    BP_R,    BP_N, BP_M},
+  {KC_LSFT, BP_AGRV,    BP_Y,    BP_X,  BP_DOT,  BP_K,    BP_EGRV,    BP_Q,    BP_G, BP_H,  BP_F, KC_RSFT },
   {KC_CAPS, BP_ALGR, KC_LGUI, KC_LALT, LT(_LOWER, KC_TAB),   KC_SPC,  KC_SPC,  LT(_RAISE, KC_ENTER),   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
 },
 
@@ -73,20 +73,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * | Esc  |      |   <  |   >  |      |      |      |      |   «  |   »  |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |   "  |   [  |   ]  |   &  |   !  |   ^  |   +  |   -  |   /  |   *  |  \   |
+ * |      |   "  |   [  |   ]  |   &  |   !  |   ^  |   +  |   -  |   /  |   *  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | CTRL |  $   |  (   |  )   |  ,   |  :   |  @   |   =  |   °  |   %  |   `  |  |   |
+ * | CTRL |  $   |  (   |  )   |  |   |  Ù   |  @   |   =  |   °  |   %  |   `  |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|  #   |  {   |  }   |  .   |  ;   |   ¨  |   '  |   ?  |   ~  |  …   | Shift|
+ * | Shift|  #   |  {   |  }   |  \   |  Ê   |   ¨  |   '  |   ?  |   ~  |  …   | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Caps | AltGr| Super| Alt  |ADJUST|      _      |      | Left | Down | Up   |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = {
   {KC_ESC, XXXXXXX,   BP_LESS,    BP_GRTR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_LGIL,    BP_RGIL, XXXXXXX, XXXXXXX},
-  {XXXXXXX,  BP_DQOT,    BP_LBRC,    BP_RBRC,    BP_AMPR,    S(BP_DCRC),    BP_DCRC,    BP_PLUS,    BP_MINS,    BP_SLSH,    BP_ASTR, BP_BSLS},
-  {KC_LCTL,  BP_DLR,   BP_LPRN,   BP_RPRN,   BP_COMM,   BP_COLON,   BP_AT,   BP_EQL, BP_DEGR,  BP_PERC, BP_GRV, BP_PIPE},
-  {KC_LSFT, BP_HASH,   BP_LCBR,   BP_RCBR,   BP_DOT,  BP_SCLN,  BP_DTRM,  BP_APOS, BP_QEST, BP_TILD, BP_ELPS, KC_RSFT},
+  {XXXXXXX,  BP_DQOT,    BP_LBRC,    BP_RBRC,    BP_AMPR,    S(BP_DCRC),    BP_DCRC,    BP_PLUS,    BP_MINS,    BP_SLSH,    BP_ASTR, XXXXXXX},
+  {KC_LCTL,  BP_DLR,   BP_LPRN,   BP_RPRN,   BP_PIPE,   BP_UGRV,   BP_AT,   BP_EQL, BP_DEGR,  BP_PERC, BP_GRV, XXXXXXX},
+  {KC_LSFT, BP_HASH,   BP_LCBR,   BP_RCBR,   BP_BSLS,  BP_ECRC,  BP_DTRM,  BP_APOS, BP_QEST, BP_TILD, BP_ELPS, KC_RSFT},
   {KC_CAPS, BP_ALGR, KC_LGUI, KC_LALT, LOWER, BP_UNDS, BP_UNDS, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT}
 },
 
