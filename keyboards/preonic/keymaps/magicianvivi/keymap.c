@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   À  |   Y  |   X  |   .  |  K   | È    |   Q  |   G  |   H  |   F  | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Caps | AltGr| Super| Alt  |LowTab|    Space    |RaiEnt| Left | Down |  Up  |Right |
+ * | Caps | AltGr| Super| Alt  |LowTab|   CtlSpace  |RaiEnt| Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_BEPO] = {
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {BP_Z,  BP_B,    BP_ECUT,    BP_P,    BP_O,    KC_DEL,    KC_BSPC,    BP_V,    BP_D,    BP_L,    BP_J,    BP_W},
   {KC_LCTL,  BP_A,    BP_U,    BP_I,    BP_E,    BP_COMM,    BP_C,    BP_T,    BP_S,    BP_R,    BP_N, BP_M},
   {KC_LSFT, BP_AGRV,    BP_Y,    BP_X,  BP_DOT,  BP_K,    BP_EGRV,    BP_Q,    BP_G, BP_H,  BP_F, KC_RSFT },
-  {KC_CAPS, BP_ALGR, KC_LGUI, KC_LALT, LT(_LOWER, KC_TAB),   KC_SPC,  KC_SPC,  LT(_RAISE, KC_ENTER),   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
+  {KC_CAPS, BP_ALGR, KC_LGUI, KC_LALT, LT(_LOWER, KC_TAB), CTL_T(KC_SPC), CTL_T(KC_SPC),  LT(_RAISE, KC_ENTER),   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
 },
 
 /* Lower
